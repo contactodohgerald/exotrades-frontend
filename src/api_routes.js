@@ -1,1 +1,1 @@
-export const BASE_URL = 'http://api.binanceextra.com/api/v1/'
+export const BASE_URL = 'https://api.binanceextra.com/api/v1/'
