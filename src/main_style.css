@@ -1,0 +1,21 @@
+.radio-style{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.fixed{
+    position: fixed;
+}
+
+.over-flow{
+    overflow-x: auto;
+}
+
+.display-none{
+    display: none;
+}
+
+.blue-text{
+    color: blue;
+}
