@@ -31,7 +31,7 @@ function SidebarHold({ users }) {
             <NavItem icon={FiHome} url_to={'/dashboard'}>Dashboard</NavItem>
             <NavItem icon={FiUser} url_to={'/profile'}>View Profile</NavItem>
             <NavItem icon={FiUserCheck} url_to={'/edit-profile'}>Edit Profile</NavItem>
-            <NavItem icon={FiChevronsRight} url_to={'/invest'}>Make Investment</NavItem>
+            <NavItem icon={FiChevronsRight} url_to={'/invest'}>Invest</NavItem>
             <NavItem icon={FiDivide} url_to={'/invest-history'}>Investment History</NavItem>
             <NavItem icon={FiAlertTriangle} url_to={'/create-earning'}>Earnings</NavItem>
             <NavItem icon={FiArchive} url_to={'/earning-history'}>Earnings History</NavItem>

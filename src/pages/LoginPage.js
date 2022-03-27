@@ -49,10 +49,8 @@ function LoginPage() {
                 navigate('/admin-access', {replace: true})
                 return
             }
-            setTimeout(
-                () => navigate('/dashboard', {replace: true}),
-                3000
-            )
+            window.location.reload()
+            bringOutToast(success)
         })
         .catch(error => {
             //return an error message

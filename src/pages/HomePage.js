@@ -1,5 +1,6 @@
 import { 
   Box,
+  Heading,
   SimpleGrid, 
   Stack, 
   useMediaQuery 
@@ -7,7 +8,6 @@ import {
 import React, { useEffect, useState } from 'react';
 import AccountBalanceCard from '../components/AccountBalanceCard';
 import ActionPerformerCard from '../components/ActionPerformerCard';
-import BreadCrumb from '../components/BreadCrumb';
 import HomeSummaryCard from '../components/HomeSummaryCard';
 import { FiArrowDown, FiArrowUp } from 'react-icons/fi'
 import swal from 'sweetalert'
@@ -66,17 +66,11 @@ function HomePage() {
   
   const [isNotSmallerScreen] = useMediaQuery('(min-width: 600px)')
 
-  const links = [
-    {
-      url: '/dashboard',
-      value: 'Dashboard',
-    },
-  ]
   return !userData ? (
     <Loader />
     ) : (
     <Stack>
-      <BreadCrumb links={links} />
+      <Heading mb={'5'} color={'orange.400'} fontSize={'lg'} textAlign={'left'}>Welcome Back - {userData.payload.name}</Heading>
       <SimpleGrid columns={isNotSmallerScreen ? 3 : 1} spacing={isNotSmallerScreen ? 6 : 3}> 
         <HomeSummaryCard title='Deposit' url='/invest-history' percent={85} amount={dashboardData.invest ? dashboardData.invest.amount : 0} total={dashboardData ? dashboardData.user_total_invest : 0} />
         <HomeSummaryCard title='Earnings' url='/earning-history' percent={10} amount={dashboardData.earnings ? dashboardData.earnings.amount : 0} total={dashboardData ? dashboardData.user_total_earnings : 0} />
